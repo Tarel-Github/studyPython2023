@@ -11,4 +11,6 @@ c = a + b
 print(c)
 if(a < b):
     print("보다 좋다!")
+    print("몰라 레후")
+
 
