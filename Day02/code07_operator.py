@@ -91,5 +91,14 @@ print(hi.lstrip()+'|')
 print(hi.rstrip()+'|')
 print(hi.strip()+'|')
 
+# 문자열에서 값 찾기
+print(full_name)
+print(full_name.find('M'))      # find는 해당 단어(문자)의 위치가 어딘지 출력
+print(full_name.find('Z'))      # 없을 경우, -1이 출력 됌
 
+print(full_name.count('u'))     # count는 찾는 단어의 갯수를 출력
+
+# 모든 단어를 대소문자로 변경
+print(full_name.upper())
+print(full_name.lower())
 
