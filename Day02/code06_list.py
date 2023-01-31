@@ -32,11 +32,23 @@ arr3 = ['Hello', 13, 'World', True]
 print(arr3)
 print(type(arr3))
 
-arr4 = [] #비어있는 리스트
-arr5 = list() #비어있는 리스트
+#비어있는 리스트
+arr4 = []
+arr5 = list()
 print(arr4)
 print(arr5)
 
+#아래는 다소 복잡한 형태의 리스트
 arr6 = [1,2,3, [6,7,8,[9,10]]]
 print(arr6)
+
+#리스트에 값 넣기
+arr4.append(4) #arr4에 4를 넣는다.
+print(arr4)
+
+#튜플
+#튜플은 소괄호를 사용
+tuple1 = (1,2,3,4)
+print(tuple1)
+#튜플은 리스트와 다르게 값을 넣고 뺄 수 없다.
 
