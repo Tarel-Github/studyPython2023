@@ -65,7 +65,6 @@ print("I'm so happy {0} you!! {1}".format('to', 'LOVE YOU'))
 
 print(f"I'm so happy {'to'} you!! {'LOVE YOU'}")
 
-
 text_a = 'PYTHON'
 print(f"I'm so happy {text_a} you!! {'LOVE YOU'}")
 
@@ -85,5 +84,12 @@ vals = full_name.split('.')
 print(vals)
 
 print(full_name.replace('Hugo MG.', 'Ashely'))
+
+# 공백지우기
+hi = '              AABB            '
+print(hi.lstrip()+'|')
+print(hi.rstrip()+'|')
+print(hi.strip()+'|')
+
 
 
