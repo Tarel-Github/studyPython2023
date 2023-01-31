@@ -4,4 +4,3 @@ print('**')
 print('***')
 print('****')
 print('*****')
-
