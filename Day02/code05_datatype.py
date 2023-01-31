@@ -48,7 +48,6 @@ print(val)
 val = '''삶은 짧으니 파이썬을 배우거라
 배우거라 배우거라'''        # 따옴표를 3번하면 여러줄 작성이 가능
 
-
 #불린
 참 = True
 거짓 = False
@@ -60,12 +59,3 @@ print(거짓 == True)
 
 print(bool(1))      #1은 True, 0이 아닌 수는 true
 print(bool(0))      #0은 False
-
-#복합형
-val1 = 1
-val2 = 2
-val3 = 3
-val4 = 4
-val5 = 5
-val6 = 6
-val7 = 7
