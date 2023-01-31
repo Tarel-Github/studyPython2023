@@ -40,17 +40,50 @@ print(current[17:])
 print(current[0:4]+'년'+current[5:7]+'월'+current[8:10]+'일'+current[11:13]+'시'+current[14:16]+'분'+current[17:]+'초')
 
 # 리스트 연산
-que = [1, 2, 3, 4, 5]
+que = [1, 2, 3, 4, 5, 6, 7]
+print(que)
+
 que[0] = 7
 print(que)
 
-que.append(6)
+que.append(8)
 print(que)
 
 que.insert(0, 0)
 print(que)
 
-que.remove(5)
+que.remove(7)
 print(que)
+
+# 문자열 리스트
+title = 'python'
+print(title)
+print('P'+title[1:])
+
+# 문자열 포맷팅
+print("I'm so happy {0} you!! {1}".format('to', 'LOVE YOU'))
+
+print(f"I'm so happy {'to'} you!! {'LOVE YOU'}")
+
+
+text_a = 'PYTHON'
+print(f"I'm so happy {text_a} you!! {'LOVE YOU'}")
+
+pi = 3.141592
+print(f"파이값은 {pi} 입니다.")
+print(f"파이값은 {pi: 0.02f} 입니다.")
+print(f"파이값은 {pi: 10.3f} 입니다.")
+
+# 특정 문자로 문자열 자르기
+
+full_name = "Hugo MG. Sung"
+vals = full_name.split()
+print(type(vals))
+print(vals)
+
+vals = full_name.split('.')
+print(vals)
+
+print(full_name.replace('Hugo MG.', 'Ashely'))
 
 
