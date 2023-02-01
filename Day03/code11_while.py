@@ -4,7 +4,7 @@ hit = 0 #변수 초기화
 while hit < 1000:
     hit += 1
     print(f"나무를 {hit}번 찍었습니다")
-    if hit == 10:
+    if hit == 4:
         print('나무가 박살났습니다!')
         break
     else: 
