@@ -1,8 +1,11 @@
+import os
+import code
+
 # 자동차 클래스
 class Car:
-    number = '12나 1234'
+    __number = '12나 1234'
 
-    def get_number(self) -> str:
+    def get_number(self):
         return self.__number
 
     def __init__(self, number = '12나 1234') -> None:

@@ -68,7 +68,7 @@ https://docs.python.org/3/library/functions.html
 1. 파이썬 기본
     - 가상환경
     - 객체지향 OOP
-    - 패키지
+    - 패키지, 모듈
 
 
 4일차 정리
