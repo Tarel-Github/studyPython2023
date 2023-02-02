@@ -12,14 +12,6 @@ class Person:
         self.height = '170'
         self.gender = 'male'
         self.blood_type = 'A'
-        
-    def __init__(self, name, height, gender, blood_type)-> None:
-        
-        self.name = name
-        self.height = height
-        
-        self.gender = 'male'
-        self.blood_type = 'A'
 
     def walk(self):
         print('걷기')
@@ -30,6 +22,10 @@ class Person:
             print(f'{self.name}은 천천히 달립니다!')
     def stop(self):
         print(f'{self.name}멈춰!')
+
+# 2. 생성자외 매직메서드(펑션) __str__
+def __str__(self)-> str:
+    return f'출력 : 이름은 {self.name}, 성별은 {self.gender}, {self.height}'
 
 Tarel = Person()
 # Tarel.name = 'Tarel'
@@ -45,16 +41,20 @@ Tarel.run('Fast')
 # 1. 초기화 후 객체생성
 hong = Person()
 hong.run('Slow')
+print(hong)
+
 
 # 2. 파라미터를 받는 생성자
 hong = Person('홍길동', 170, 'female', 'A')
 print(f'{hong.name}의 혈액형은 {hong.blood_type} 입니다.')
 
+print(hong.name)
+print(hong.height)
+print(hong.gender)
+print(hong)
+
 # 3. 메소드
 hong = Person(f'self홍길동', 170, 'female')
-
-
-
 
 class character:
     name = ''
