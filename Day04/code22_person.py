@@ -5,6 +5,22 @@ class Person:
     gender = ''
     blood_type = 'A'
 
+
+    # 1. 초기화 추가
+    def __init__(self, name, height, gender, blood_type):
+        self.name = '홍길동'
+        self.height = '170'
+        self.gender = 'male'
+        self.blood_type = 'A'
+        
+    def __init__(self, name, height, gender, blood_type)-> None:
+        
+        self.name = name
+        self.height = height
+        
+        self.gender = 'male'
+        self.blood_type = 'A'
+
     def walk(self):
         print('걷기')
     def run(self, option):
@@ -12,12 +28,11 @@ class Person:
             print(f'{self.name}은 전속력으로 달립니다!')
         else:
             print(f'{self.name}은 천천히 달립니다!')
-    def stop():
-        print('멈춰!')
-
+    def stop(self):
+        print(f'{self.name}멈춰!')
 
 Tarel = Person()
-Tarel.name = '민성'
+# Tarel.name = 'Tarel'
 Tarel.height = 170
 Tarel.gender = 'male'
 Tarel.blood_type = 'B'
@@ -25,8 +40,20 @@ Tarel.blood_type = 'B'
 
 print(f'{Tarel.name}의 혈액형은 {Tarel.blood_type} 입니다.')
 
-Tarel.walk()
 Tarel.run('Fast')
+
+# 1. 초기화 후 객체생성
+hong = Person()
+hong.run('Slow')
+
+# 2. 파라미터를 받는 생성자
+hong = Person('홍길동', 170, 'female', 'A')
+print(f'{hong.name}의 혈액형은 {hong.blood_type} 입니다.')
+
+# 3. 메소드
+hong = Person(f'self홍길동', 170, 'female')
+
+
 
 
 class character:
