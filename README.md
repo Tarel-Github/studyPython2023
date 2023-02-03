@@ -73,3 +73,7 @@ https://docs.python.org/3/library/functions.html
 
 4일차 정리
 
+## 5일차
+1. 파이썬 기본
+    - 
+
