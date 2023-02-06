@@ -13,6 +13,8 @@ class Genesis(Car):
         self.__product_year = product_year
         print(f'{self.__name} 인스턴스 생성!')
 
+    def get_colr(self, color):
+        return self.__color
     
     def set_name(self, name):
         self.__name = name
@@ -24,6 +26,7 @@ class Genesis(Car):
 
 gv80 = Genesis('팔공이', 'black', '66오 1004', 2022)
 print(f'이차의 이름은 {gv80.get_name()}입니다.')
+print(gv80.get_color())
 print(gv80.run())
 print(gv80.stop())
 

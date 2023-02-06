@@ -7,13 +7,15 @@ class Car:
 
     def __str__(self) -> str:
         return '부모 클래스'
+    
+    def get_color(self):
+        return self.__color
 
     def set_name(self, name) -> str:
         self.__name = name
     
     def get_name(self):
         return self.__name
-        
 
     def run(self):
         return '차가 달립니다.'
