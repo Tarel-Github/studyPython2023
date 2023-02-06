@@ -3,7 +3,6 @@
 # Tarel
 import os # 운영체제용 모듈
 
-
 # 2. 클래스 생성
 class Contact:
     # 생성자 - 이름, 전번, 이멜, 주소
@@ -40,9 +39,6 @@ class Contact:
         return self.__addr
     
 
-
-
-
 # 5. 사용자 입력
 def set_contact():
     name, phone_num, email, addr = input('정보입력(이름, 전번, 이메일, 주소) ').split('/')
@@ -75,13 +71,25 @@ def del_contact(list, name):
     # if name in list:
     #     list.remove(name)
 
-#13. 주소록 파일 저장
+# 13. 주소록 파일 저장
 def save_contacts(list):
     file = open('C:\Source\studyPython2023\Project\contact.txt', 'w', encoding='utf-8')
     for item in list:
         text = f'{item.getName()}/{item.getPhoneNum()}/{item.getEmail()}/{item.getAddr()}\n'
-        file.write(f'{text}\n')
+        file.write(f'{text}')
     file.close()
+
+# 14. 주소록 읽어오기
+def load_contacts(list):
+    file = open('C:\Source\studyPython2023\Project\contact.txt','r', encoding='utf-8')
+    while True:
+        line = file.readline().replace('\n','') #15. 문장끝에 \n 제거
+        if not line: break
+        lines = line.split('/')
+        print(lines)
+        contact = Contact(lines[0], lines[1], lines[2], lines[3])
+        list.append(contact)
+        
 
 # 추가. 화면클리어
 def clear_console():
@@ -105,6 +113,7 @@ def get_menu():
 # 3. 전체실행
 def run():
     contacts = list()   # 주소를 담기 위한 빈 리스트를 생성
+    load_contacts(contacts) # 주소록 읽어오기    
 #     temp = Contact("Tarel", "010-1234-5678", "abcdefg@example.com",
 #                    "부산시 남구 대연동")
 #     print(temp)
