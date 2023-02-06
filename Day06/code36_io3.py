@@ -11,9 +11,15 @@ print('7. Hello.\\World')        #역슬레시를 문자열에 넣기위한 것�
 
 print('8. Hello\0')             #널문자 표현
 
+# 문자열포맷팅 - 옛방식
+# %로 포멧코드를 시작
+me = '저'
+name = 'Tarel'
+age = 20
+print('%s는 %s입니다. %d대 입니다.'%(me, name, age))
 
-
-
+print(f'{254.112233:.2f}')
+print('%9.2f' %(254.112233))
 
 
 
