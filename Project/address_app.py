@@ -1,6 +1,10 @@
 # 주소록 프로그램
 # 2023-02-06
 # Tarel
+# 15. 예외처리
+# 15-1 파일 없을 때 발생하는 예외
+# 15-2 입력시 / 개수가 다를 때 발생하는 예외
+# 15-3 메뉴번호 입력 숫자외의 예외
 import os # 운영체제용 모듈
 
 # 2. 클래스 생성
@@ -81,7 +85,13 @@ def save_contacts(list):
 
 # 14. 주소록 읽어오기
 def load_contacts(list):
-    file = open('C:\Source\studyPython2023\Project\contact.txt','r', encoding='utf-8')
+    try:
+        file = open('C:\Source\studyPython2023\Project\contact.txt','r', encoding='utf-8')
+
+    except Exception as e:
+        f = open('C:\Source\studyPython2023\Project\contact.txt','w', encoding='utf-8')
+        f.close() # 파일이 없어서 생기는 예외는 파일생성하고 함수탈출
+        return
     while True:
         line = file.readline().replace('\n','') #15. 문장끝에 \n 제거
         if not line: break
@@ -89,6 +99,7 @@ def load_contacts(list):
         print(lines)
         contact = Contact(lines[0], lines[1], lines[2], lines[3])
         list.append(contact)
+    file.close()
         
 
 # 추가. 화면클리어
@@ -101,13 +112,16 @@ def clear_console():
 
 # 6. 메뉴표시
 def get_menu():
-    str_menu = ('주소록앱 v0.5\n'
+    str_menu = ('주소록앱 v0.5 반드시 4번을 통해 앱을 종료해야 저장됍니다.\n'
                 '1. 연락처 추가\n'
                 '2. 연락처 출력\n'
                 '3. 연락처 삭제\n'
-                '4. 앱종료')
+                '4. 저장 및 종료')
     print(str_menu)
-    menu = int(input('메뉴입력: '))
+    try:
+        menu = int(input('메뉴입력: '))
+    except Exception as e:
+        menu = 0        # 영문자, 특수문자 넣으면 전부 0으로
     return menu
 
 # 3. 전체실행
@@ -121,11 +135,15 @@ def run():
     while True:
         sel_menu = get_menu()
         if sel_menu == 1: #8. 연락처 추가
-            contact = set_contact()
-            contacts.append(contact)
-            input('주소록 입력 성공')
-            clear_console()
-            
+            try:    # 15-2 연락처 입력잘못했을 때 예외처리
+                contact = set_contact()
+                contacts.append(contact)
+                input('주소록 입력 성공')
+            except Exception as e:
+                print('입력에러')
+                input()
+            finally:
+                clear_console()        
         elif sel_menu == 2: #9. 연락처 출력
             get_contact(contacts)
             input('주소록 출력 완료')
