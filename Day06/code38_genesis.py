@@ -13,14 +13,18 @@ class Genesis(Car):
         self.__product_year = product_year
         print(f'{self.__name} 인스턴스 생성!')
 
-    def get_colr(self, color):
-        return self.__color
-    
     def set_name(self, name):
         self.__name = name
 
+    def get_name(self):
+        return self.__name
+
+    def get_colr(self):
+        return self.__color
+    
     def run(self):
         return f'{self.__name}이(가) 달립니다.'
+    
     def stop(self):
         return f'{self.__name}이(가) 멈춥니다.'
 
