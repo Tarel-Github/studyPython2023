@@ -91,3 +91,11 @@ https://docs.python.org/3/library/functions.html
 
 ![실행화면](https://raw.githubusercontent.com/Tarel-Github/studyPython2023/main/images/address_app.png)
 
+## 7일차
+1. 파이썬 응용
+    - 주피터 노트북
+        - 노트북 생성
+    - 리스트 연산 추가
+    - 라이브러리 사용법
+    - 원품 개발(GUI)
+    - 응용 학습
