@@ -108,12 +108,14 @@ https://docs.python.org/3/library/functions.html
     - 웹크롤링
         - 기상청 오늘의 날씨 크롤링
         - 데이터포털 OpenAIP 크롤링
-        - BeautifulSoup
+        - BeautifulSoup 크롤링
 
+![실행화면]https://raw.githubusercontent.com/Tarel-Github/studyPython2023/main/images/jupyter_folium.png
+FoliumOpenAPI 연동화면
 
 
 ## 9일차
 1. 파이썬 응용
-    - 자료구조 추가
-    - 원품 개발(GUI)
+    - GUI 개발(PyQt)
     - 응용 학습
+
