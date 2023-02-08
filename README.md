@@ -110,7 +110,8 @@ https://docs.python.org/3/library/functions.html
         - 데이터포털 OpenAIP 크롤링
         - BeautifulSoup 크롤링
 
-![실행화면]https://raw.githubusercontent.com/Tarel-Github/studyPython2023/main/images/jupyter_folium.png
+![실행화면](https://raw.githubusercontent.com/Tarel-Github/studyPython2023/main/images/jupyter_folium.png)
+
 FoliumOpenAPI 연동화면
 
 
