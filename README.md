@@ -103,7 +103,10 @@ https://docs.python.org/3/library/functions.html
 ## 8일차
 1. 파이썬 응용
     - 라이브러리 사용법
-        - 웹크롤링용 라이브러리
+        - urllib.request
+    - 웹크롤링
+        - 기상청 오늘의 날씨 크롤링
+        - 데이터포털 OpenAIP 크롤링
     - 자료구조 추가
     - 원품 개발(GUI)
     - 응용 학습
