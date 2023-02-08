@@ -99,6 +99,7 @@ https://docs.python.org/3/library/functions.html
     - 라이브러리 사용법
         - folium(지도 라이브러리)
 
+주피터 노트북과 folium을 사용한 지도표시
 
 ## 8일차
 1. 파이썬 응용
@@ -107,7 +108,12 @@ https://docs.python.org/3/library/functions.html
     - 웹크롤링
         - 기상청 오늘의 날씨 크롤링
         - 데이터포털 OpenAIP 크롤링
+        - BeautifulSoup
+
+
+
+## 9일차
+1. 파이썬 응용
     - 자료구조 추가
     - 원품 개발(GUI)
     - 응용 학습
-
