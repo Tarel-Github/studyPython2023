@@ -2,7 +2,6 @@ import sys
 from PyQt5.QtWidgets import QApplication, QWidget
 from PyQt5.QtGui import QIcon
 
-
 class MyApp(QWidget):
     def __init__(self) -> None:
         super().__init__()
@@ -19,11 +18,7 @@ class MyApp(QWidget):
         self.resize(400, 200)
         self.show()#핵심! 창을 출력
         
-
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyApp()
     sys.exit(app.exec_())
-
-

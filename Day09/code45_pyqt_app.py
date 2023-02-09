@@ -13,11 +13,7 @@ class MyApp(QWidget):
         self.resize(400, 200) # 창의 크기를 바꿈
         self.show()#핵심! 창을 출력
 
-
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyApp()
     sys.exit(app.exec_())
-
-
