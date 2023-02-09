@@ -46,7 +46,6 @@ class MyApp(QMainWindow):
         self.setWindowTitle('Bar Window') # 창의 타이틀 이름을 바꿈
         self.move(50, 50) # 처음 창의 위치를 선정, 0,0은 왼쪽 위, 기본값은 정 중앙
         self.resize(400, 200) # 창의 크기를 바꿈
-        self.setCenter()
         self.show()#핵심! 창을 출력
 
     # 창 중앙에 배치
