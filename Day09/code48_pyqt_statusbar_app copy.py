@@ -2,9 +2,8 @@
 # 2023.02.09
 # SMS
 import sys
-from PyQt5.QtWidgets import QApplication, QPushButton, QWidget, QMainWindow
+from PyQt5.QtWidgets import QApplication, QAction , QMainWindow, qApp
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QCoreApplication
 
 class MyApp(QMainWindow):
     def __init__(self):
@@ -12,6 +11,22 @@ class MyApp(QMainWindow):
         self.initUI()
 
     def initUI(self):
+
+        # 액션
+        # 액션에 아이콘을 추가
+        actExit = QAction(QIcon('./Day09/exit.png'), 'Exit', self)
+        # 액션에 단축키를 추가
+        actExit.setShortcut('Ctrl+Q') # 단축키 지정
+        # 액션에 설명을 추가
+        actExit.setStatusTip('앱 종료')
+        # 액션 작동시, 종료
+        actExit.triggered.connect(qApp.quit)
+
+        menubar = self.menuBar()
+        menubar.setNativeMenuBar(False)#네이티브 메뉴바를 쓰지 않겠다는 말
+        filemenu = menubar.addMenu('&File')
+        filemenu.addAction(actExit)
+
         # 상태바
         self.statusBar().showMessage('StatusBar message')
         
