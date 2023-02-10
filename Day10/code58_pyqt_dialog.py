@@ -16,7 +16,7 @@ class MyApp(QWidget):
         self.btnDlg.resize(100, 100)
 
 
-        self.setLayout(vbox)    
+        #self.setLayout(vbox)    
 
         self.textEdit = QTextEdit(self)
 
