@@ -120,3 +120,9 @@ FoliumOpenAPI 연동화면
     - GUI 개발(PyQt)
     - 응용 학습
 
+## 10일차
+1. 파이썬 응용
+    - GUI 개발
+        - PyQt 위젯 계속
+
+        
