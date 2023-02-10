@@ -16,8 +16,13 @@ class MyApp(QWidget):
         btn2 = QPushButton(self)
         btn2.setText('Button&2')
 
+        btn3 = QPushButton('Button3', self)
+        btn3.setEnabled(False)
+
         vbox = QVBoxLayout()
         vbox.addWidget(btn1)
+        vbox.addWidget(btn2)
+        vbox.addWidget(btn3)
         
         self.setLayout(vbox)
 

@@ -7,9 +7,6 @@ class MyApp(QWidget):
         super().__init__()
         self.initUI()
 
-    
-
-
     def initUI(self):
         label1 = QLabel('Label1',self)
         label1.move(20, 20)
@@ -18,7 +15,6 @@ class MyApp(QWidget):
 
         btn1 = QPushButton('Button1', self)
         btn1.move(80, 13)
-
 
         # 이 밑은 필수 설정
         self.setWindowTitle('절대 배치')
