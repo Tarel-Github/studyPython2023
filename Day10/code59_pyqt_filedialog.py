@@ -10,7 +10,6 @@ class MyApp(QMainWindow):
         self.initUI()
 
     def initUI(self):
-
         self.textEdit = QTextEdit(self)
         self.setCentralWidget(self.textEdit)
         self.statusBar()
@@ -32,14 +31,12 @@ class MyApp(QMainWindow):
 
     def onClicked(self):
         fname = QFileDialog.getOpenFileName(self, '파일열기', './')
-
         if fname[0]:
             file = open(fname[0], 'rt', encoding='utf-8')
             with file:
                 data = file.read()
                 self.textEdit.setText(data)        
             file.close()
-
         QMessageBox.about(self, '성공', '로드했습니다.')
 
     def closeEvent(self, event) -> None:
@@ -50,7 +47,6 @@ class MyApp(QMainWindow):
         else:
             event.ignore() # 프로그램 계속
         
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = MyApp()

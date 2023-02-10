@@ -10,25 +10,24 @@ class MyApp(QWidget):
         self.initUI()
 
     def initUI(self):
-        self.btnDlg = QPushButton('Dialog', self)
-        self.btnDlg.move(30, 30)
-        self.btnDlg.clicked.connect(self.onClicked)        
-        
-        self.txtInput = QLineEdit(self)
-        self.txtInput.move(30, 60)
+        # 이미지 사이즈 강제 변경 .scaledToWidth(w)
+        pixmap = QPixmap('./Day10/cat.png').scaledToWidth(800)
 
+        lblImage = QLabel(self)
+        lblImage.setPixmap(pixmap)
+        lblSize = QLabel(str(pixmap.width()) + 'x' + str(pixmap.height()))
+        lblSize.setAlignment(Qt.AlignmentFlag.AlignCenter) # Qt.AlignCenter 가능
 
-        #필수 설정
+        vbox = QVBoxLayout(self)
+        vbox.addWidget(lblImage)
+        vbox.addWidget(lblSize)
+
+        self.setLayout(vbox)
+
+        # 필수설정
+        self.setWindowIcon(QIcon('./Day09/iot.png'))
         self.setWindowTitle('이미지 위젯')
-        #self.showFullScreen()# 풀스크린
-        self.setGeometry(400,400,300,300)
         self.show()
-
-    def onClicked(self):
-        text, ok = QInputDialog.getText(self, '인풋 타이얼로그', '이름을 적으시오')
-
-        if ok:
-            self.txtInput.setText(text)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

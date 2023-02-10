@@ -19,26 +19,16 @@ class MyApp(QWidget):
         cbOption.addItem('Option 4')
         cbOption.addItem('Option 5')
         cbOption.move(20, 40)
-        cbOption.activated[str].connect(self.cbOption)        
+        cbOption.activated[str].connect(self.onActivated)        
 
         # 이 밑은 필수 설정
         self.setWindowTitle('콤보박스')
         self.setGeometry(300, 300, 300, 300)
         self.show()
 
-    # def onActiovation(elst)""
-
-    def checkKorea(self, state):
-        if state == Qt.CheckState.Checked:
-            self.setWindowTitle('나는 한국인')
-        else:
-            self.setWindowTitle('뭐지?')
-
-    def changeTitle(self, state):
-        if state == Qt.CheckState.Checked: # Qt.Checked도 사용가능
-            self.setWindowTitle('체크박스 체크')
-        else:
-            self.setWindowTitle('체크박스 체크해제')
+    def onActivated(self, text):
+        self.lblOption.setText('선택값 :' + text)
+        self.lblOption.adjustSize() # 글자수 만큼 라벨 넓이를 조정
 
 if __name__== '__main__':
     app = QApplication(sys.argv)

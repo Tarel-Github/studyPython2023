@@ -5,7 +5,6 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 
 class MyApp(QWidget):
-
     def __init__(self):
         super().__init__()
         self.initUI()

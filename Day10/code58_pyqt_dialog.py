@@ -18,12 +18,13 @@ class MyApp(QWidget):
         self.txtInput.move(20, 50)
 
         #필수 설정
-        self.setWindowTitle('라인에디트')
+        self.setWindowTitle('다이얼로그')
         self.setGeometry(300, 300, 300, 300)
         self.show()
 
-    def btnClicked(self):
+    def onClicked(self):
         text, ok = QInputDialog.getText(self, '인풋다이얼로그', '이름을 적으세요')
+        print(ok)
 
         if ok:
             self.txtInput.setText(text)
