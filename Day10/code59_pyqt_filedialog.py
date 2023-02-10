@@ -40,7 +40,7 @@ class MyApp(QMainWindow):
                 self.textEdit.setText(data)        
             file.close()
 
-        QMessageBox.show(self, '로드했습니다.')
+        QMessageBox.about(self, '성공', '로드했습니다.')
 
     def closeEvent(self, event) -> None:
         reply = QMessageBox.question(self, '종료', '저장하지 않은 정보가 날아갑니다.<br> 종료합니까?',
