@@ -42,16 +42,42 @@
 
 # abc = str(input('영어문장을 입력하세요 > '))
 # print(f'{solution(abc)} / {len(solution(abc))}')
+#=====
+
+# sentance = input('영어문장 입력 > ')
+# words = sentance.split()
+# print(len(words), end = ' / ')
+# for i, word in enumerate(words):
+#     if( i+1) %2 == 0:
+#         print(word.upper(), end = ' ')
+#     else:
+#         print(word, end=' ')
 
 #====================================
-def solution(data):
-    a = data.split(' ')
-    a.sort(reverse=True)
-    b = ' '.join(s for s in a)
-    return b
+# def solution(data):
+#     a = data.split(' ')
+#     a.sort(reverse=True)
+#     b = ' '.join(s for s in a)
+#     return b
 
-n = str(input('숫자를 입력하세요(예시: 2 3 1 4) > '))
-print(solution(n))
+# n = str(input('숫자를 입력하세요(예시: 2 3 1 4) > '))
+# print(solution(n))
+
+#=====
+# numbers = list(map(int, input('수를 여러개 입력').split()))
+
+# for i  in numbers:
+#     print(i, end= ' ')
+
+# print('-->', end = ' ')
+# numbers.reverse()
+
+# for i in numbers:
+#     print(i, end= ' ')
+
+
+
+
 
 #====================================
 
@@ -64,7 +90,13 @@ print(solution(n))
 # n = int(input('구구단 단 번호를 입력하세요 > '))
 # print(solution(n))
 
+#=====
+number = int(input('단 번호를 입력하세요 > '))
 
+print(f'{number} --> ', end = '')
+
+for i in range(1,10):
+    print(f'{number*i}', end = ' ')
 
 
 
