@@ -3,8 +3,8 @@
 # def solution(radius):
 #     return math.pi*radius**2
 
-# input = int(input('반지름을 입력하세요 > '))
-# print(f'원의 넓이는 {solution(input)} 입니다.')
+# rad = int(input('반지름을 입력하세요 > '))
+# print(f'원의 넓이는 {solution(rad)} 입니다.')
 
 #====================================
 
@@ -28,8 +28,8 @@
 #     else:
 #         return '잘못된 입력입니다. 다시 입력해주세요'
 
-# input = str(input('행성 이름을 영어로 입력하세요 > '))
-# print(solution(input))
+# n = str(input('행성 이름을 영어로 입력하세요 > '))
+# print(solution(n))
 
 #====================================
 
@@ -40,8 +40,8 @@
 #             a[i] = a[i].upper()
 #     return a
 
-# input = str(input('영어문장을 입력하세요 > '))
-# print(f'{solution(input)} / {len(solution(input))}')
+# abc = str(input('영어문장을 입력하세요 > '))
+# print(f'{solution(abc)} / {len(solution(abc))}')
 
 #====================================
 def solution(data):
@@ -50,8 +50,8 @@ def solution(data):
     b = ' '.join(s for s in a)
     return b
 
-input = str(input('숫자를 입력하세요(예시: 2 3 1 4) > '))
-print(solution(input))
+n = str(input('숫자를 입력하세요(예시: 2 3 1 4) > '))
+print(solution(n))
 
 #====================================
 
@@ -61,8 +61,8 @@ print(solution(input))
 #         a = a + str(i * data) + ' '
 #     return a
 
-# input = int(input('구구단 단 번호를 입력하세요 > '))
-# print(solution(input))
+# n = int(input('구구단 단 번호를 입력하세요 > '))
+# print(solution(n))
 
 
 
